@@ -37,10 +37,11 @@ public class UserController {
     }
 
     @RequestMapping("/userId")
-    public void getUser(HttpServletRequest req) {
+    public  void getUser(HttpServletRequest req) {
         Userinfo userinfo = userinfoMapper.selectByPrimaryKey(2);
 
         System.out.println(userinfo.getBirthday()+"\t"+userinfo.getUsername());
+        System.out.println("<p>"+userinfo.getBirthday() + "\t" + userinfo.getUsername()+"</p>");
 
     }
 }
